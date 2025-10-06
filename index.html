@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSolutions - Soluciones Tecnológicas Avanzadas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- ========= PÁGINA 1: INICIO (PÚBLICO) ======== -->
+    <div id="pagina-inicio" class="pagina">
+        <nav class="barra-navegacion">
+            <div class="contenedor">
+                <div class="logo" onclick="mostrarPagina('pagina-inicio')">
+                    <svg class="icono-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                    TechSolutions
+                </div>
+                <ul class="enlaces-navegacion">
+                    <li><a onclick="mostrarPagina('pagina-inicio')">Inicio</a></li>
+                    <li><a onclick="mostrarPagina('pagina-servicios')">Servicios</a></li>
+                    <li><a onclick="mostrarPagina('pagina-login')" class="boton-admin">Admin Login</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <header class="seccion-hero">
+            <div class="particulas-fondo"></div>
+            <div class="contenedor">
+                <div class="contenido-hero">
+                    <div class="icono-hero">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h1 class="titulo-principal">
+                        <span class="texto-gradiente">Soluciones Tecnológicas</span>
+                        <span class="texto-blanco">a tu Medida</span>
+                    </h1>
+                    <p class="subtitulo">
+                        Transformamos ideas en realidad digital. Somos una empresa líder dedicada a 
+                        ofrecer servicios de software de alta calidad con tecnología de vanguardia.
+                    </p>
+                    <div class="botones-hero">
+                        <button onclick="mostrarPagina('pagina-servicios')" class="boton boton-primario">
+                            Ver Servicios
+                            <svg class="icono-boton" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            </svg>
+                        </button>
+                        <button class="boton boton-secundario">Contactar</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="contenido-principal">
+            <div class="contenedor">
+                <section class="seccion-caracteristicas">
+                    <div class="grid-caracteristicas">
+                        <div class="tarjeta-caracteristica">
+                            <div class="icono-caracteristica">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <h3>Tecnología Avanzada</h3>
+                            <p>Utilizamos las últimas tecnologías para crear soluciones innovadoras</p>
+                        </div>
+                        <div class="tarjeta-caracteristica">
+                            <div class="icono-caracteristica">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <h3>Calidad Garantizada</h3>
+                            <p>Comprometidos con la excelencia en cada proyecto que desarrollamos</p>
+                        </div>
+                        <div class="tarjeta-caracteristica">
+                            <div class="icono-caracteristica">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <h3>Soporte 24/7</h3>
+                            <p>Asistencia técnica continua para garantizar el funcionamiento óptimo</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="pie-pagina">
+            <div class="contenedor">
+                <p>&copy; 2025 TechSolutions. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+    <!-- ======= PÁGINA 2: SERVICIOS (PÚBLICO) ======= -->
+    <div id="pagina-servicios" class="pagina">
+        <nav class="barra-navegacion">
+            <div class="contenedor">
+                <div class="logo" onclick="mostrarPagina('pagina-inicio')">
+                    <svg class="icono-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                    TechSolutions
+                </div>
+                <ul class="enlaces-navegacion">
+                    <li><a onclick="mostrarPagina('pagina-inicio')">Inicio</a></li>
+                    <li><a onclick="mostrarPagina('pagina-servicios')">Servicios</a></li>
+                    <li><a onclick="mostrarPagina('pagina-login')" class="boton-admin">Admin Login</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="contenido-principal">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <h2 class="titulo-seccion">Nuestros <span class="texto-gradiente">Servicios</span></h2>
+                    <p class="descripcion-seccion">Soluciones tecnológicas diseñadas para impulsar tu negocio</p>
+                </div>
+                
+                <div class="grid-servicios" id="grid-servicios">
+                    <div class="tarjeta-servicio" onclick="mostrarDetalleServicio(1)">
+                        <div class="imagen-servicio">
+                            <img src="./imagenes/imagen_1.png" alt="Desarrollo Web">
+                            <div class="overlay-servicio">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="contenido-servicio">
+                            <h3>Desarrollo Web Corporativo</h3>
+                            <p class="precio-servicio">$1,200.00</p>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-servicio" onclick="mostrarDetalleServicio(2)">
+                        <div class="imagen-servicio">
+                            <img src="./imagenes/imagen_2.png" alt="App Móvil">
+                            <div class="overlay-servicio">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="contenido-servicio">
+                            <h3>Desarrollo de App Móvil</h3>
+                            <p class="precio-servicio">$3,500.00</p>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-servicio" onclick="mostrarDetalleServicio(3)">
+                        <div class="imagen-servicio">
+                            <img src="./imagenes/imagen_3.png" alt="Consultoría TI">
+                            <div class="overlay-servicio">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="contenido-servicio">
+                            <h3>Consultoría TI</h3>
+                            <p class="precio-servicio">$600.00</p>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-servicio" onclick="mostrarDetalleServicio(4)">
+                        <div class="imagen-servicio">
+                            <img src="./imagenes/imagen_4.png" alt="Soporte Técnico">
+                            <div class="overlay-servicio">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="contenido-servicio">
+                            <h3>Soporte Técnico 24/7</h3>
+                            <p class="precio-servicio">$300.00/mes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="pie-pagina">
+            <div class="contenedor">
+                <p>&copy; 2025 TechSolutions. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div> 
+    <!-- ========= PÁGINA 3: LOGIN ADMINISTRADOR ========= -->
+    <div id="pagina-login" class="pagina">
+        <div class="contenedor-login">
+            <div class="formulario-login">
+                <div class="encabezado-login">
+                    <div class="logo-login">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                        TechSolutions
+                    </div>
+                    <h2>Panel de Administración</h2>
+                    <p>Ingresa tus credenciales para continuar</p>
+                </div>
+
+                <form id="formulario-login">
+                    <div class="grupo-formulario">
+                        <label for="usuario">Usuario</label>
+                        <input type="text" id="usuario" required>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" id="contrasena" required>
+                    </div>
+                    <button type="submit" class="boton boton-login">Ingresar</button>
+                    <p id="error-login">Usuario o contraseña incorrectos.</p>
+                </form>
+
+                <div class="enlace-volver">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M3 12h18M3 12l6-6M3 12l6 6"/>
+                    </svg>
+                    <a onclick="mostrarPagina('pagina-inicio')">Volver al inicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========= PÁGINA 4: DASHBOARD ADMIN ========= -->
+    <div id="pagina-dashboard" class="pagina">
+        <aside class="barra-lateral">
+            <div class="encabezado-lateral">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+                <h3>Dashboard</h3>
+            </div>
+            
+            <ul class="navegacion-lateral">
+                <li>
+                    <a href="#" class="enlace-navegacion activo" data-objetivo="seccion-servicios">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        Gestionar Servicios
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="enlace-navegacion" data-objetivo="seccion-usuarios">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M12.5 7a4 4 0 11-8 0 4 4 0 018 0zM20 8v6M23 11h-6"/>
+                        </svg>
+                        Gestionar Usuarios
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="pie-lateral">
+                <button onclick="mostrarPagina('pagina-inicio')" class="boton boton-secundario boton-completo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M3 12h18M3 12l6-6M3 12l6 6"/>
+                    </svg>
+                    Ver Sitio Público
+                </button>
+                <button id="boton-cerrar-sesion" class="boton boton-peligro boton-completo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/>
+                    </svg>
+                    Cerrar Sesión
+                </button>
+            </div>
+        </aside>
+
+        <main class="contenido-principal-dashboard">
+            <section id="seccion-servicios" class="seccion-dashboard activa">
+                <div class="caja-contenido">
+                    <div class="encabezado-contenido">
+                        <h2>Gestión de Servicios</h2>
+                        <button class="boton boton-exito" onclick="abrirModal('agregar', 'servicio')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 5v14M5 12h14"/>
+                            </svg>
+                            Agregar Servicio
+                        </button>
+                    </div>
+                    
+                    <div class="contenedor-tabla">
+                        <table class="tabla-crud">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Stock</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cuerpo-tabla-servicios">
+                                <tr>
+                                    <td>1</td>
+                                    <td>Desarrollo Web Corporativo</td>
+                                    <td class="precio-tabla">$1,200.00</td>
+                                    <td>5</td>
+                                    <td><span class="estado-disponible">Disponible</span></td>
+                                    <td class="celda-acciones">
+                                        <button class="boton-accion boton-editar" onclick="abrirModal('editar', 'servicio', this)">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+                                                <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                            </svg>
+                                        </button>
+                                        <button class="boton-accion boton-eliminar" onclick="eliminarFila(this)">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m3 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6h14zM10 11v6M14 11v6"/>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Desarrollo de App Móvil</td>
+                                    <td class="precio-tabla">$3,500.00</td>
+                                    <td>3</td>
+                                    <td><span class="estado-promocion">En Promoción</span></td>
+                                    <td class="celda-acciones">
+                                        <button class="boton-accion boton-editar" onclick="abrirModal('editar', 'servicio', this)">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+                                                <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                            </svg>
+                                        </button>
+                                        <button class="boton-accion boton-eliminar" onclick="eliminarFila(this)">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m3 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6h14zM10 11v6M14 11v6"/>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Consultoría TI</td>
+                                    <td class="precio-tabla">$600.00</td>
+                                    <td>10</td>
+                                    <td><span class="estado-disponible">Disponible</span></td>
+                                    <td class="celda-acciones">
+                                        <button class="boton-accion boton-editar" onclick="abrirModal('editar', 'servicio', this)">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+                                                <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                            </svg>
+                                        </button>
+                                        <button class="boton-accion boton-eliminar" onclick="eliminarFila(this)">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m3 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6h14zM10 11v6M14 11v6"/>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Soporte Técnico 24/7</td>
+                                    <td class="precio-tabla">$300.00/mes</td>
+                                    <td>15</td>
+                                    <td><span class="estado-promocion">En Promoción</span></td>
+                                    <td class="celda-acciones">
+                                        <button class="boton-accion boton-editar" onclick="abrirModal('editar', 'servicio', this)">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+                                                <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                            </svg>
+                                        </button>
+                                        <button class="boton-accion boton-eliminar" onclick="eliminarFila(this)">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m3 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6h14zM10 11v6M14 11v6"/>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="seccion-usuarios" class="seccion-dashboard">
+                <div class="caja-contenido">
+                    <div class="encabezado-contenido">
+                        <h2>Gestión de Usuarios</h2>
+                        <button class="boton boton-exito" onclick="abrirModal('agregar', 'usuario')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 5v14M5 12h14"/>
+                            </svg>
+                            Agregar Usuario
+                        </button>
+                    </div>
+                    
+                    <div class="contenedor-tabla">
+                        <table class="tabla-crud">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Email</th>
+                                    <th>Rol</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cuerpo-tabla-usuarios">
+                                <tr>
+                                    <td>101</td>
+                                    <td>Carlos Rivera</td>
+                                    <td>c.r@email.com</td>
+                                    <td><span class="rol-cliente">Cliente</span></td>
+                                    <td class="celda-acciones">
+                                        <button class="boton-accion boton-editar" onclick="abrirModal('editar', 'usuario', this)">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+                                                <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                            </svg>
+                                        </button>
+                                        <button class="boton-accion boton-eliminar" onclick="eliminarFila(this)">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m3 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6h14zM10 11v6M14 11v6"/>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>102</td>
+                                    <td>Ana Gómez</td>
+                                    <td>a.g@email.com</td>
+                                    <td><span class="rol-cliente">Cliente</span></td>
+                                    <td class="celda-acciones">
+                                        <button class="boton-accion boton-editar" onclick="abrirModal('editar', 'usuario', this)">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+                                                <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                            </svg>
+                                        </button>
+                                        <button class="boton-accion boton-eliminar" onclick="eliminarFila(this)">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m3 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6h14zM10 11v6M14 11v6"/>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>001</td>
+                                    <td>Admin User</td>
+                                    <td>admin@tech.com</td>
+                                    <td><span class="rol-admin">Admin</span></td>
+                                    <td class="celda-acciones">
+                                        <button class="boton-accion boton-editar" onclick="abrirModal('editar', 'usuario', this)">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+                                                <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                            </svg>
+                                        </button>
+                                        <button class="boton-accion boton-eliminar" onclick="eliminarFila(this)">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m3 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6h14zM10 11v6M14 11v6"/>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- MODAL GENÉRICO PARA AGREGAR/EDITAR -->
+    <div class="overlay-modal" id="modal-crud">
+        <div class="contenido-modal">
+            <div class="encabezado-modal">
+                <h3 id="titulo-modal">Título del Modal</h3>
+                <button class="cerrar-modal" onclick="cerrarModal()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="cuerpo-modal" id="cuerpo-modal"></div>
+            <div class="pie-modal">
+                <button class="boton boton-secundario" onclick="cerrarModal()">Cancelar</button>
+                <button class="boton boton-primario" id="boton-guardar-modal">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
